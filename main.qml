@@ -11,18 +11,30 @@ ApplicationWindow {
 
 
     Button{
-        text: "click maar"
+        text: "Refresh"
+        height: 18
+        x:200
+        onClicked:{
+            if(guipaneel.updateStoplicht()){
+                water.color = "red"
+            }else{
+                water.color = "green"
+            }
+        }
+    }
+    Button{
+        text: "maakRood"
+        height: 18
+        x:400
+        onClicked:{
+            guipaneel.maakStoplichtRood();
+        }
+    }
+    Button{
+        text: "maakGroen"
         height: 18
         onClicked:{
-            game.test();
-            this.text = game.nuString();
-            water.height = 300
-            if(game.doen()){
-                this.text = "wel";
-            }else{
-                this.text = "niet"
-            }
-
+            guipaneel.maakStoplichtGroen();
         }
     }
     Rectangle{

@@ -2,18 +2,17 @@
 #include <QQmlApplicationEngine>
 #include <QQmlEngine>
 #include <QQmlContext>
-#include "game.h"
+#include "guipaneel.h"
 
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QScopedPointer<Game> game(new Game);
-
+    QScopedPointer<GUIPaneel> guipaneel(new GUIPaneel);
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-    engine.rootContext()->setContextProperty("game",game.data());
+    engine.rootContext()->setContextProperty("guipaneel",guipaneel.data());
     return app.exec();
 }

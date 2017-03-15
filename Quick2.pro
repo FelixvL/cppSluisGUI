@@ -4,9 +4,10 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    game.cpp \
     sluissysteem.cpp \
-    guipaneel.cpp
+    guipaneel.cpp \
+    stoplichtsysteem.cpp \
+    stoplicht.cpp
 
 RESOURCES += qml.qrc
 
@@ -33,6 +34,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    game.h \
     sluissysteem.h \
-    guipaneel.h
+    guipaneel.h \
+    stoplichtsysteem.h \
+    stoplicht.h

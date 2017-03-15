@@ -1,18 +1,15 @@
 #ifndef SLUISSYSTEEM_H
 #define SLUISSYSTEEM_H
 
-#include <string>
-#include <cstring>
-using namespace std;
-
-
+#include "stoplichtsysteem.h"
 
 class SluisSysteem
 {
+    StoplichtSysteem stoplichtSysteem;
 public:
     int getal = 6;
-    string naam = "naamen";
     SluisSysteem();
+    StoplichtSysteem* getStoplichtSysteem();
 };
 
 #endif // SLUISSYSTEEM_H
