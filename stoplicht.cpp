@@ -13,3 +13,6 @@ void Stoplicht::setGroen(){
 void Stoplicht::setRood(){
     isRood = true;
 }
+void Stoplicht::setId(int id){
+    this->id = id;
+}

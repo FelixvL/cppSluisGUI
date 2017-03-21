@@ -9,9 +9,10 @@ class StoplichtSysteem
     Stoplicht stoplichtSABI;
     Stoplicht stoplichtSOBU;
     Stoplicht stoplichtSOBI;
+    Stoplicht stoplichten[4];
 public:
     StoplichtSysteem();
-    Stoplicht* getStoplicht();
+    Stoplicht* getStoplicht(int i);
 };
 
 #endif // STOPLICHTSYSTEEM_H

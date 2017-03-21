@@ -5,10 +5,13 @@
 class Stoplicht
 {
     bool isRood;
+    int id;
 public:
     bool getIsRood();
     void setGroen();
     void setRood();
+    void getId();
+    void setId(int id);
     Stoplicht();
 };
 

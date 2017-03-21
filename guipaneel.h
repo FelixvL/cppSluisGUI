@@ -14,8 +14,8 @@ class GUIPaneel : public QObject
 public:
     SluisSysteem sluisSysteem;
     explicit GUIPaneel(QObject *parent = 0);
-    Q_INVOKABLE bool updateStoplicht();
-    Q_INVOKABLE void maakStoplichtGroen();
+    Q_INVOKABLE bool updateStoplicht(int i);
+    Q_INVOKABLE void maakStoplichtGroen(int i);
     Q_INVOKABLE void maakStoplichtRood();
 
 signals:
